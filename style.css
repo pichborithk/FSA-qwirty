@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Roboto+Condensed:wght@300;400&display=swap');
+/* :root {
+  --fs-xl: clamp(2.4rem, 2.58vw, 6rem);
+} */
 
 * {
   box-sizing: border-box;
@@ -87,7 +90,62 @@ input:focus {
   font-size: 2rem;
   padding: 5px;
   align-items: center;
+  flex-shrink: 0;
 }
+
+/* Main */
+
 main {
   background-color: #eeeeee;
+  display: flex;
+}
+
+.categories {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 240px;
+  padding: 10px;
+}
+
+.categories > a {
+  background-color: #c060a1;
+  text-align: center;
+  margin: 0px 16px 16px 16px;
+  padding: 16px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  box-shadow: 1px 3px 10px 1px gray;
+}
+
+main > section.items > div.item > h2 {
+  display: flex;
+  justify-content: space-between;
+  background-color: #c060a1;
+  padding: 5px;
+}
+main > section.items > div.item > h2 > span,
+main > section.items > div.item > h2 > .fa-solid {
+  font-size: 1.8rem;
+}
+
+main > section.items > div.item > p.description {
+  color: #000;
+  font-size: 1.6rem;
+  padding: 5px;
+}
+main > section.items > div.item > p:last-child {
+  font-size: 1.6rem;
+  background-color: #c060a1;
+  padding: 5px;
 }
